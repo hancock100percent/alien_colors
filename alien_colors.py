@@ -2,8 +2,15 @@
 # in a game. Create a variable called alien_color and assign 
 # it a value of 'green', 'yellow', or 'red'.
 
-# alien_colors = ('green')
+# Turn your if-else chain from Exercise 5-4 into an if-elif-
+# else chain.
+# • If the alien is green, print a message that the player earned 5 points.
+# • If the alien is yellow, print a message that the player earned 10 points.
+# • If the alien is red, print a message that the player earned 15 points.
+# • Write three versions of this program, making sure each message is printed
+# for the appropriate color alien
 
+# alien_colors = ('green')
 # Write an if statement to test whether the alien’s color is green. 
 # If it is, print a message that the player just earned 5 points
 # # Using a for loop to print the statement five times
@@ -48,29 +55,44 @@ create_simple_image()
 
 
 # alien_colors = ['green']
-
 # if alien_colors == green:
 #     print('player just earned 5 points')
+
+# • If the alien is green, print a message that the player earned 5 points.
+# • If the alien is yellow, print a message that the player earned 10 points.
+# • If the alien is red, print a message that the player earned 15 points.
+
 
 # begin guessing game
 def guessing_game():
     print("Welcome to the Guessing Game!")
-    print("I have picked a number between 1 and 100. Can you guess what it is?")
+    print("Guess the color of the alien and win points")
 
     # Generate a green number between 1 and 100
-    alien_colors = ('green')
+    five_points = ('green')
+    ten_points = ('yellow')
+    fifteen_points = ('red')
+
+    green = 10
+    yellow = 10
+    red = 15
+
     attempts = 0
 
     while True:
-        guess = (input("Enter your guess (between 1 and 100): "))
+        guess = (input("Enter your guess (hint: it's a color): "))
         attempts += 1
 
-        if guess == alien_colors:
-            print(f"Congratulations! You've guessed the number {alien_colors} correctly in {attempts} attempts!")
-        elif guess != alien_colors:
-            print("NOPE! Try again.")
+        if guess == 'green':
+            print("player earned 5 points.:")
+        elif guess == 'yellow':
+            print("player earned 10 points.:")
+        elif guess == 'red':
+            print("player earned 5 points.:")
         else:
-            print("unexpected input")
+            print("Not the correct color of the alien")
+            print(f"You entered {attempts} attempts!")
+
             break
 
     play_again = input("Do you want to play again? (yes/no): ").lower()
